@@ -1,0 +1,23 @@
+Error when instantating VM from Vagrant and at the ansible playbook execution step:
+
+==> app1: Running provisioner: ansible...
+Vagrant has automatically selected the compatibility mode '2.0'
+according to the Ansible version installed (2.4.3.0).
+
+Alternatively, the compatibility mode can be specified in your Vagrantfile:
+https://www.vagrantup.com/docs/provisioning/ansible_common.html#compatibility_mode
+
+    app1: Running ansible-playbook...
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [app1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '[127.0.0.1]:2327' (ECDSA) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", "unreachable": true}
+	to retry, use: --limit @/Users/harshatheegela/ansible/class1/playbook.retry
+
+PLAY RECAP *********************************************************************
+app1                       : ok=0    changed=0    unreachable=1    failed=0   
+
+Ansible failed to complete successfully. Any error output should be
+visible above. Please fix these errors and try again.
+
