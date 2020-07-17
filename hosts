@@ -1,0 +1,6 @@
+[harsha]
+app1.lab.com ansible_host=192.168.50.15 ansible_user=ansible ansible_port=2327
+app2.lab.com ansible_host=127.0.0.1 ansible_user=ansible ansible_port=2328
+
+[test]
+app1.lab.com ansible_host=192.168.50.15 ansible_user=ansible ansible_port=2327

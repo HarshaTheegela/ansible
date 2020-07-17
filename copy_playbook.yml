@@ -1,0 +1,10 @@
+---
+- hosts : all
+  tasks:
+       - name : to copy the files
+         copy:
+           src: /Users/harshatheegela/ansible/class1/test
+           dest: /tmp/test1
+           owner: harsha
+           group: harsha
+           mode: '0644'
